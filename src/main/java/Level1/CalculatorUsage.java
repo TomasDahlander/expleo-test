@@ -10,6 +10,10 @@ import java.util.Scanner;
  */
 public class CalculatorUsage {
 
+    /**
+     * Console application for taking user input and using the Calculator class
+     * @param args
+     */
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         Scanner input = new Scanner(System.in);

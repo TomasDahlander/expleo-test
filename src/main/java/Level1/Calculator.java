@@ -8,6 +8,14 @@ package Level1;
  */
 public class Calculator {
 
+    /**
+     * Method that checks what operator should be used depending on the mathematical expression
+     * and uses another method with specified arguments.
+     * Expression should be as per format example: 2+3 or 6*22
+     * @param expression A String that should contain a mathematical expression.
+     * @return Double containing the result of the mathematical expression.
+     * @throws Exception If the operation can't be performed due to wrong input parameters.
+     */
     public double evaluate(String expression) throws Exception {
         expression = expression.replace(" ","");
 
@@ -17,6 +25,14 @@ public class Calculator {
         else return getResult(expression,'-');
     }
 
+    /**
+     * Support method that calculates an mathematical expression given as full expression
+     * and a char indicating which operator should be used.
+     * @param expression A String that should contain a mathematical expression.
+     * @param operator A char that should be a mathematical operator like [+-/*].
+     * @return Double containing the result of the mathematical expression.
+     * @throws Exception If the operation can't be performed due to wrong input parameters.
+     */
     private double getResult(String expression, char operator) throws Exception {
         int indexOfOperator = expression.lastIndexOf(operator);
         double firstNr = Double.parseDouble(expression.substring(0, indexOfOperator));
@@ -29,12 +45,4 @@ public class Calculator {
         }
         else return firstNr * secondNr;
     }
-
 }
-
-/*
-calculator.evaluate("2+30"); // returns 32
-calculator.evaluate("2 * 3"); // returns 6
-calculator.evaluate("2 -3"); // returns -1
-calculator.evaluate("2 / 3"); // returns 0.6666666...
- */

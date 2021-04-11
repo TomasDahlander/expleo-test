@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Time: 11:40 <br>
  * Project: expleo-test <br>
  */
-public class AnagramTester {
+public class AnagramChecker {
 
     public boolean isAnagram(String word1, String word2){
         word1 = word1.toLowerCase().replace(" ","");

@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
  * Time: 11:44 <br>
  * Project: expleo-test <br>
  */
-public class AnagramTesterTest {
+public class AnagramCheckerTest {
 
     @Test
     public final void isAnagramTest(){
-        AnagramTester at = new AnagramTester();
+        AnagramChecker at = new AnagramChecker();
         assertTrue(at.isAnagram("Mary","army"));
         assertTrue(at.isAnagram("åra","råa"));
         assertTrue(at.isAnagram("dog","GOD"));

@@ -10,28 +10,24 @@ import java.util.Scanner;
  */
 public class CalculatorUsage {
 
+    /**
+     * Console application for taking user input and using the Calculator class
+     * @param args
+     */
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         Scanner input = new Scanner(System.in);
+        System.out.print("Write a math expression to solve example: 3+7+-2\nWrite exit to quit: ");
         while(true) {
             String expression = input.nextLine();
+            if(expression.equalsIgnoreCase("exit")) System.exit(0);
             try {
                 double answer = calculator.evaluate(expression);
-                System.out.println(answer);
-            }catch(IndexOutOfBoundsException e){
-                e.printStackTrace();
+                System.out.println(Math.round(answer*100)/100.0);
+            }catch (Exception e) {
+                System.out.println(e.getMessage());
             }
-            catch (Exception e) {
-                e.printStackTrace();
-            }
+            System.out.print("Write next math expression: ");
         }
     }
 }
-
-
-/*
-calculator.evaluate("2+30+4"); // returns 36
-calculator.evaluate("2 - 3 + 4 + 15"); // returns 18
-calculator.evaluate("2 * 3 * 4"); // returns 24
-calculator.evaluate("2 * 3 / 4 * 20”); // returns 30
- */
