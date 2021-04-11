@@ -59,3 +59,9 @@ so it can be added in the lists of values in the beginning so another calculatio
 It keeps doing this until the list of operators is empty and then the final result it sent back 
 for display. 
 
+**************** Level 2 *****************
+I didn't have time for this solution but given the instructions I would apart from my level 2 solution: 
+    * Try to separate out the different operators +- and */, maybe with a class that would keep track of this.
+    * Additional I would probably create another class to act like a queue that could arrange 
+      the single expressions in an order that would be mathematical correct to execute. 
+
