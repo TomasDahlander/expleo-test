@@ -1,4 +1,4 @@
-package Level1;
+package CalculatorTest.Level1;
 
 import java.util.Scanner;
 
@@ -8,14 +8,14 @@ import java.util.Scanner;
  * Time: 19:39 <br>
  * Project: expleo-test <br>
  */
-public class CalculatorUsage {
+public class CalculatorUsage1 {
 
     /**
      * Console application for taking user input and using the Calculator class
      * @param args
      */
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
+        Calculator1 calculator = new Calculator1();
         Scanner input = new Scanner(System.in);
 
         System.out.print("Write a math expression to solve example: 3+7\nWrite exit to quit: ");

@@ -1,4 +1,4 @@
-package Level2;
+package CalculatorTest.Level2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
  * Project: expleo-test <br>
  * Class that functions as a calculator for single String mathematical expression <br>
  */
-public class Calculator {
+public class Calculator2 {
 
     List<Character> chars = new ArrayList<>();
     List<Double> numbers = new ArrayList<>();

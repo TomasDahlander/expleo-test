@@ -1,4 +1,4 @@
-package Level1;
+package CalculatorTest.Level1;
 
 /**
  * Created by Tomas Dahlander <br>
@@ -6,7 +6,7 @@ package Level1;
  * Time: 17:39 <br>
  * Project: expleo-test <br>
  */
-public class Calculator {
+public class Calculator1 {
 
     /**
      * Method that checks what operator should be used depending on the mathematical expression
