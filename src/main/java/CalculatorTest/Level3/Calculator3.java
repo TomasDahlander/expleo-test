@@ -1,4 +1,4 @@
-package CalculatorTest.Level2;
+package CalculatorTest.Level3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
  * Project: expleo-test <br>
  * Class that functions as a calculator for single String mathematical expression <br>
  */
-public class Calculator2 {
+public class Calculator3 {
 
     List<Character> chars = new ArrayList<>();
     List<Double> numbers = new ArrayList<>();
@@ -43,13 +43,6 @@ public class Calculator2 {
     private boolean isCorrectExpression(String expression){
         boolean containsLetter = expression.matches(".*[a-zA-ZåäöÅÄÖ,]+.*");
         if(containsLetter) return false;
-        boolean containsAddition = expression.matches(".*[+]+.*");
-        boolean containsSubtraction = expression.matches(".*[-]+.*");
-        boolean containsMultiplication = expression.matches(".*[*]+.*");
-        boolean containsDivision = expression.matches(".*[/]+.*");
-        if(containsAddition || containsSubtraction){
-            if(containsMultiplication || containsDivision) return false;
-        }
         char firstC = expression.charAt(0);
         char lastC = expression.charAt(expression.length()-1);
         if(firstC == '*' || firstC == '/' || firstC == '+') return false;
@@ -101,6 +94,17 @@ public class Calculator2 {
      * @throws Exception if the used method getPartialResult throws and exception.
      */
     private double getResult() throws Exception {
+
+        for(int i = chars.size()-1; i >= 0; i--){
+            if(chars.get(i) == '*' || chars.get(i) == '/'){
+                double operator1 = numbers.remove(i);
+                double operator2 = numbers.remove(i);
+                char c = chars.remove(i);
+                double firstPrecedenceResult = getPartialResult(operator1,operator2,c);
+                numbers.add(i,firstPrecedenceResult);
+            }
+        }
+
         while(chars.size() > 0){
             double operator1 = numbers.remove(0);
             double operator2 = numbers.remove(0);

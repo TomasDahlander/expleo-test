@@ -34,6 +34,8 @@ for use when later dividing the expression into two separate doubles for which t
 Then it checks which character is in the parameter and executes the correct code for the operation 
 and sends back a double with the answer. 
 
+Test by running main method in CalculatorUsage1 class
+
 **************** Level 2 *****************
 On the second level on the problem I added three instance objects. 
     * List of Character that will hold the mathematical operators
@@ -59,9 +61,13 @@ so it can be added in the lists of values in the beginning so another calculatio
 It keeps doing this until the list of operators is empty and then the final result it sent back 
 for display. 
 
-**************** Level 2 *****************
-I didn't have time for this solution but given the instructions I would apart from my level 2 solution: 
-    * Try to separate out the different operators +- and */, maybe with a class that would keep track of this.
-    * Additional I would probably create another class to act like a queue that could arrange 
-      the single expressions in an order that would be mathematical correct to execute. 
+Test by running main method in CalculatorUsage2 class
 
+**************** Level 3 *****************
+For this level I added a for loop before the calculating part that runs through the list with the characters 
+and sends the part expressions with * and / to the getPartialResult method to calculate these first 
+and then returns the result to the right index in the numbers list. 
+
+After that the same procedure is done to calculate the rest and return a result for display. 
+
+Test by running main method in CalculatorUsage3 class.
