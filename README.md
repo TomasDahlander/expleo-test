@@ -1,5 +1,7 @@
 # expleo-test
 
+The correct code to evaluate are located in the master branch in this repository.
+
 Problem 1: Detect Anagram
 
 For this assignment I created the class AnagramChecker and the test class AnagramCheckerTest. 
